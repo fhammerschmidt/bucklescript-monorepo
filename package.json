@@ -16,6 +16,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
+    "redemon": "^0.2.4",
     "webpack-cli": "^3.3.11"
   }
 }

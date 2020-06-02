@@ -1,6 +1,6 @@
 # BuckleScript Monorepo example
 
-Note: This is an adaption from Antonio Monteiro's [bucklescript-monorepo](https://github.com/anmonteiro/bucklescript-monorepo), which does not utilize nix but requires the user to install `jq` and `entr` manually instead.
+Note: This is an adaption from Antonio Monteiro's [bucklescript-monorepo](https://github.com/anmonteiro/bucklescript-monorepo), which does not utilize nix but requires the user to install `jq` manually instead.
 
 This small example, boostrapped from the `react-hooks` theme (`bsb -init . -theme react-hooks`), showcases a simple monorepo setup for BuckleScript
 projects.
@@ -14,7 +14,7 @@ It strives to be as simple as possible and makes the following design choices:
   - BuckleScript's watch mode isn't aware of linked dependencies
   - Watch mode is implemented by reading the source directories BuckleScript is
     aware of (just like `bsb` does) and passing them to
-    [entr](http://eradman.com/entrproject/), a simple utility to run commands
+    [redemon](https://github.com/ulrikstrid/redemon/), a simple utility to run commands
     when files change.
 - No reliance on `bsb`
   - `bsb` is written in JavaScript, and I've got better things to do than to
@@ -69,21 +69,20 @@ self-contained libraries, which should feel familar for folks that have used
 
 ## Running the example
 
-To run the example, ensure that the packages `entr` and `jq` are installed. For instance on macOS with Homebrew, install them via
+To run the example, ensure that the package `jq` is installed. For instance on macOS with Homebrew, install it via
 
 ```sh
-$ brew install jq entr
+$ brew install jq
 ```
 
 Or, on Linux, install them with your os package manager, e.g. on Ubuntu:
 
 ```sh
-$ apt install jq entr
+$ apt install jq
 ```
 
-Or download and install them manually:
+Or download and install it manually:
 
-- [entr](http://eradman.com/entrproject/)
 - [jq](https://stedolan.github.io/jq/download/)
 
 Next, execute yarn to install all necessary dependencies, including bs-platform.

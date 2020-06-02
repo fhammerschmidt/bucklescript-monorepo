@@ -32,8 +32,8 @@ serve:
 bs:
 	$(BSB) $(BSB_ARGS)
 
-watch: bs
-	printf "%s\n" $(BSDIRS) | entr -d -s '$(BSB) $(BSB_ARGS)'
+watch: 
+	yarn redemon $(foreach dir, $(BSDIRS),--path '$(dir)') bs
 
 print-%: ; @echo $*=$($*)
 
