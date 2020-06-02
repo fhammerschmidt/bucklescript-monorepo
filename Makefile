@@ -17,7 +17,7 @@ endif
 ifeq ($(detected_OS), Darwin)
 	BSB := ./node_modules/bs-platform/darwin/bsb.exe
 	# macOS find is slightly different from Linux (-E flag for extended regex)
-	BSDIRS = $(shell find -EL $$(jq -r 'include "./dirs"; dirs' ./lib/bs/.sourcedirs.json) -maxdepth 1 -type f -iregex ".*(re|ml)i?")
+	BSDIRS = $(shell find -EL $$(jq -r 'include "./dirs"; dirs' ./lib/bs/.sourcedirs.json) -maxdepth 1 -type f -iregex ".*\.(re|ml)i?")
 endif
 
 BSB_ARGS:= -make-world
