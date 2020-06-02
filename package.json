@@ -2,17 +2,18 @@
   "name": "bucklescript-monorepo",
   "version": "0.1.0",
   "scripts": {
-    "serve": "webpack-dev-server",
-    "postinstall": "ln -sfn $BSB_PATH/../ node_modules/bs-platform && ln -sfn $BSB_PATH/*.exe ./node_modules/.bin"
+    "start": "make",
+    "serve": "webpack-dev-server"
   },
   "license": "MIT",
   "dependencies": {
+    "bs-platform": "^7.3.2",
+    "fetched-dog-pictures": "link:./src/FetchedDogPictures",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "reason-react": ">=0.8.0",
     "webpack": "^4.43.0",
-    "webpack-dev-server": "^3.11.0",
-    "fetched-dog-pictures": "link:./src/FetchedDogPictures"
+    "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
     "webpack-cli": "^3.3.11"
