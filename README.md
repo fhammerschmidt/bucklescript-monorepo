@@ -1,7 +1,8 @@
 # BuckleScript Monorepo example
 
-This small example, boostrapped from the `react-hooks` theme (`bsb -init .
--theme react-hooks`), showcases a simple monorepo setup for BuckleScript
+Note: This is an adaption from Antonio Monteiro's [bucklescript-monorepo](https://github.com/anmonteiro/bucklescript-monorepo), which does not utilize nix but requires the user to install `jq` and `entr` manually instead.
+
+This small example, boostrapped from the `react-hooks` theme (`bsb -init . -theme react-hooks`), showcases a simple monorepo setup for BuckleScript
 projects.
 
 It strives to be as simple as possible and makes the following design choices:
@@ -68,16 +69,33 @@ self-contained libraries, which should feel familar for folks that have used
 
 ## Running the example
 
-_Note_: this repository is set up to consume `bs-platform` using
-[Nix](https://nixos.org/nix/) simply because that's the package manager I use.
-It should work if you're consuming `bs-platform` from NPM, as long as the
-references to `$BSB_PATH` and `./node_modules/.bin/bsb.exe` are replaced
-appropriately.
-
-To run the example, run:
+To run the example, ensure that the packages `entr` and `jq` are installed. For instance on macOS with Homebrew, install them via
 
 ```sh
-$ make
+$ brew install jq entr
+```
+
+Or, on Linux, install them with your os package manager, e.g. on Ubuntu:
+
+```sh
+$ apt install jq entr
+```
+
+Or download and install them manually:
+
+- [entr](http://eradman.com/entrproject/)
+- [jq](https://stedolan.github.io/jq/download/)
+
+Next, execute yarn to install all necessary dependencies, including bs-platform.
+
+```sh
+$ yarn
+```
+
+Afterwards, run:
+
+```sh
+$ yarn start
 ```
 
 This will start a watcher process and serve a bundle via `webpack-dev-server`.
