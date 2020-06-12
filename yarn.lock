@@ -2985,9 +2985,9 @@ reason-react@>=0.8.0:
   integrity sha512-97AfK3eCF6vfP8rnbq3k6GgXsZt//OiPMINTUk5luJ8W0Wt/JaYsDG6eWKP8Zx3gPpxSU1EPjB1pUm6o6fBnFA==
 
 redemon@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/redemon/-/redemon-0.2.4.tgz#5f7ef5cef844acc395a975687023f0df69fb901f"
-  integrity sha512-9mUz+BTeHTaLXKOZMz7H1Nqvof9JaqKE3mWghVJT4EZgoxQ7F4RLM/bnhz5rsFL//nCbpnkCi58msTqladB0nA==
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/redemon/-/redemon-0.2.6.tgz#59e4d738eddc3c9369e8f6ab35aa01dc2760c265"
+  integrity sha512-kSZBy+b4q4P6/q5elqQe7NDZXDrZpbaklk+fYW6CJjb4JpeHW9rmczxkIVtWZc5MvxMmX0aDn8rlFafcnvUQJQ==
 
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
